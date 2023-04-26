@@ -18,6 +18,7 @@ const FormUser = ({ createNewUser, updateInfo, updateUserById, setUpdateInfo, se
             console.log(updateInfo)
             updateUserById(updateInfo.id, data)
             setUpdateInfo()
+            handleExit()
         } else {
             // Create
             await Swal.fire({
