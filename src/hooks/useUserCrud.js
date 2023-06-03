@@ -1,8 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
+// import {url_back} from "../../url"
 const useUserCrud = () => {
   const [users, setUsers] = useState();
-  const url = "https://users-crud.academlo.tech/users/";
+  const url = `https://users-crud.academlo.tech/users`;
+  // const url = `${url_back.URL_USERS}`;
 
   // GET
 
@@ -27,7 +29,7 @@ const useUserCrud = () => {
   // DELETE
 
   const deleteUserBiId = (id) => {
-    const urlDelete = `${url}${id}/`;
+    const urlDelete = `${url}/${id}`;
     axios
       .delete(urlDelete)
       .then((res) => {
@@ -39,7 +41,7 @@ const useUserCrud = () => {
 
   // UPDATE
   const updateUserById = (id, data) => {
-    const urlUpdate = `${url}${id}/`;
+    const urlUpdate = `${url}/${id}`;
     axios
       .put(urlUpdate, data)
       .then((res) => {

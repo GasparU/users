@@ -24,7 +24,7 @@ const UseCard = ({ user, setUpdateInfo, deleteUserBiId, setFormClose }) => {
     }
     return (
         <article className={`user`}>
-            <h2 className='user__name'>{user.first_name} {user.last_name}</h2>
+            <h2 className='user__name'>{user.firstname} {user.lastname}</h2>
 
             <ul className='user__list'>
                 <li className='user__item'><span className='user__label'>Email: </span><span className='user__value'>{user.email}</span></li>
