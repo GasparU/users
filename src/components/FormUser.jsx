@@ -24,7 +24,7 @@ const FormUser = ({ createNewUser, updateInfo, updateUserById, setUpdateInfo, se
             await Swal.fire({
                 position: 'top-center',
                 icon: 'success',
-                title: `Usuario ${data.firstname} ${data.lastname} creado correctamente`,
+                title: `Usuario ${data.first_name} ${data.last_name} creado correctamente`,
                 showConfirmButton: false,
                 timer: 2500
             })
@@ -54,14 +54,14 @@ const FormUser = ({ createNewUser, updateInfo, updateUserById, setUpdateInfo, se
                     {errors.password?.type === 'required' && <p className="form__errors_message" role="alert">el campo "Contraseña" es Obligatorio</p>}
                 </div>
                 <div className="form__item">
-                    <label className="form__label" htmlFor="firstname">First Name</label>
-                    <input className="form__input"  {...register("firstname", { required: true })} aria-invalid={errors.firstname ? "true" : "false"} type="text" id="firstname" />
-                    {errors.firstname?.type === 'required' && <p className="form__errors_message" role="alert">el campo "First Name" es Obligatorio</p>}
+                    <label className="form__label" htmlFor="first_name">First Name</label>
+                    <input className="form__input"  {...register("first_name", { required: true })} aria-invalid={errors.first_name ? "true" : "false"} type="text" id="first_name" />
+                    {errors.first_name?.type === 'required' && <p className="form__errors_message" role="alert">el campo "First Name" es Obligatorio</p>}
                 </div>
                 <div className="form__item">
-                    <label className="form__label" htmlFor="lastname">Last Name</label>
-                    <input className="form__input" {...register("lastname", { required: true })} aria-invalid={errors.lastname ? "true" : "false"} type="text" id="lastname" />
-                    {errors.lastname?.type === 'required' && <p className="form__errors_message" role="alert">el campo "Last Name" es Obligatorio</p>}
+                    <label className="form__label" htmlFor="last_name">Last Name</label>
+                    <input className="form__input" {...register("last_name", { required: true })} aria-invalid={errors.last_name ? "true" : "false"} type="text" id="last_name" />
+                    {errors.last_name?.type === 'required' && <p className="form__errors_message" role="alert">el campo "Last Name" es Obligatorio</p>}
                 </div>
                 <div className="form__item">
                     <label className="form__label" htmlFor="birthday">Birthday</label>
